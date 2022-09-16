@@ -19,8 +19,8 @@
 #import "ZLAnimateTransition.h"
 #import "ZLInteractiveTrasition.h"
 #import "ZLPullDownInteractiveTransition.h"
-#import <SDWebImage/SDImageCodersManager.h>
-#import <SDWebImage/SDImageGIFCoder.h>
+//#import <SDWebImage/SDImageCodersManager.h>
+//#import <SDWebImage/SDImageGIFCoder.h>
 
 @interface ZLShowBigImgViewController () <UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
 {
@@ -100,9 +100,9 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged:) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
     
-    if (![[SDImageCodersManager sharedManager].coders containsObject:[SDImageGIFCoder sharedCoder]]) {
-        [[SDImageCodersManager sharedManager] addCoder:[SDImageGIFCoder sharedCoder]];
-    }
+//    if (![[SDImageCodersManager sharedManager].coders containsObject:[SDImageGIFCoder sharedCoder]]) {
+//        [[SDImageCodersManager sharedManager] addCoder:[SDImageGIFCoder sharedCoder]];
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated

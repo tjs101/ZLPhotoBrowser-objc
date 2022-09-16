@@ -13,7 +13,7 @@
 #import "ZLPhotoModel.h"
 #import "ZLAlbumListController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <SDWebImage/UIImage+Metadata.h>
+//#import <SDWebImage/UIImage+Metadata.h>
 #import "ToastUtils.h"
 #import "ZLProgressView.h"
 #import "ZLVideoPlayerControl.h"
@@ -290,7 +290,7 @@
 - (UIImageView *)imageView
 {
     if (!_imageView) {
-        _imageView = [[SDAnimatedImageView alloc] init];
+        _imageView = [[UIImageView alloc] init];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
 //        _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
@@ -466,7 +466,7 @@
         @zl_strongify(self);
         if (![[info objectForKey:PHImageResultIsDegradedKey] boolValue]) {
             self.indicator.hidden = YES;
-            self.imageView.image = [SDAnimatedImage imageWithData:data];
+            self.imageView.image = [UIImage imageWithData:data];
             [self resetSubviewSize:asset];
         }
     }];

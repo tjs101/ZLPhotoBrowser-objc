@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
-#import <SDWebImage/SDAnimatedImageView.h>
+//#import <SDWebImage/SDAnimatedImageView.h>
 
 @class ZLPhotoModel, PHAsset, ZLPreviewView, ZLProgressView, ZLVideoPlayerControl;
 
@@ -79,7 +79,7 @@
 //---------------base preview---------------
 @interface ZLBasePreviewView : UIView
 
-@property (nonatomic, strong) SDAnimatedImageView *imageView;
+@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) ZLProgressView *indicator;
 @property (nonatomic, strong) PHAsset *asset;
 @property (nonatomic, assign) PHImageRequestID imageRequestID;
